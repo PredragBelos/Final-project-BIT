@@ -1,0 +1,9 @@
+.card{
+    width: 95%;
+    margin: 0px auto;
+}
+.candidateImage{
+    height: 300px;
+    background-size: cover;
+    
+}
