@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App/App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { candidates } from './shared/publicData';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,3 +14,5 @@ ReactDOM.render(
 
 
 reportWebVitals();
+
+console.log(candidates);
