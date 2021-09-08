@@ -19,3 +19,5 @@ export const candidates = [
     candidate7,
     candidate8,
 ]
+
+export const candidatesIcon = <i className="fas fa-users"></i>
