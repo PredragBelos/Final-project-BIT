@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchBox from '../Search box/searchBox';
 import './css/candidateCards.css';
 
 const CandidateCards = () => {
@@ -10,8 +11,8 @@ const CandidateCards = () => {
 
     //RENDER
     return (
-        <div className="candidateCards">
-
+        <div className="container candidateCards">
+            <SearchBox/>
         </div>
     );
 };

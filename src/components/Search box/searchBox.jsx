@@ -11,7 +11,15 @@ const SearchBox = () => {
     //RENDER
     return (
         <div className="searchBox">
-            
+
+            <div className="searchBoxPar">
+                <p>Candidates</p>
+            </div>
+
+            <div className="searchBoxInput">
+                <input type="text" name="candidate" placeholder="Search"/>
+            </div>
+
         </div>
     );
 };

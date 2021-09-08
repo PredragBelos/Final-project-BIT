@@ -1,0 +1,88 @@
+.searchBox {
+    padding: 30px 0px 15px 0px;
+    border-bottom: 1px solid rgb(150, 150, 150);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchBoxPar {
+    width: 200px;
+}
+
+.searchBoxPar p {
+    margin: 0px;
+    font-size: 22px;
+    color: rgb(255, 173, 51);
+}
+
+.searchBoxInput {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.searchBoxInput input {
+    height: 35px;
+    width: 250px;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+    color: rgb(150, 150, 150);
+}
+
+/*Media screen style*/
+@media screen and (min-width: 1400px) and (max-width: 6000px) {
+    .searchBoxInput {
+        width: 1096px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    .searchBoxInput {
+        width: 916px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .searchBoxInput {
+        width: 736px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .searchBoxInput {
+        width: 496px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .searchBoxInput {
+        width: 316px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    .searchBox {
+        flex-direction: column;
+    }
+
+    .searchBoxPar {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .searchBoxPar p{
+        text-align: center;
+    }
+
+    .searchBoxInput {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .searchBoxInput input{
+        text-align: center;
+    }
+}
