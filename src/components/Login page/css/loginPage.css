@@ -4,21 +4,21 @@
 
 
 .loginPage{
-    margin: 0px;
-    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
     background-color: rgb(51, 51, 51);
 }
 
 .loginForm {
-  background-color: rgb(51, 51, 51);
-  border: 1px solid rgb(255, 173, 51);
-  border-radius: 5px;
-  width: 300px; 
-  padding-bottom: 25px;
+    width: 300px; 
+    padding-bottom: 25px;
+    background-color: rgb(51, 51, 51);
+    border: 1px solid rgb(255, 173, 51);
+    border-radius: 5px;
 }
 
 .loginHeading{
@@ -37,6 +37,11 @@
     color:rgb(51, 51, 51)
 }
 
+label{
+    color: rgb(255, 173, 51);
+    font-size: 18px;
+}
+
 .loginInput{
     width: 90%;
     margin: 0px auto;
@@ -45,22 +50,18 @@
 }
 
 input[type=text], input[type=password] {
+    box-sizing: border-box;
+    display: inline-block;
     width: 100%;
     padding: 12px 20px;
     margin: 15px 0;
-    display: inline-block;
-    border: 1px solid rgb(255, 173, 51);
     background-color: rgba(255, 173, 51, 0.2);
     color: rgb(255, 173, 51);
-    box-sizing: border-box;
+    border: 1px solid rgb(255, 173, 51);
     border-radius: 5px;
 }
 
   
-label{
-    color: rgb(255, 173, 51);
-    font-size: 18px;
-}
     
 .loginBtn{
     display: flex;
@@ -69,16 +70,16 @@ label{
 }
   
 button {
-    background-color: rgb(255, 173, 51);
-    color: rgb(51, 51, 51);
-    border-radius: 5px;
+    width: 150px;
     padding: 14px 20px;
     margin: 30px 0;
-    border: none;
-    cursor: pointer;
-    width: 150px;
+    background-color: rgb(255, 173, 51);
+    color: rgb(51, 51, 51);
     font-size: 18px;
     font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
   
 button:hover {
