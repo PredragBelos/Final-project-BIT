@@ -10,9 +10,9 @@ const Footer = () => {
 
     //RENDER
     return (
-        <div className="footer">
-            
-        </div>
+        <footer className="container-flow footer">
+            <p>Copiright BIT 2021</p>
+        </footer>
     );
 };
 
