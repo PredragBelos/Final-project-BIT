@@ -13,11 +13,11 @@ const SearchBox = () => {
         <div className="searchBox">
 
             <div className="searchBoxPar">
-                <p>Candidates</p>
+                <p className="searchHeading">Candidates</p>
             </div>
 
             <div className="searchBoxInput">
-                <input type="text" name="candidate" placeholder="Search"/>
+                <input className="srcInput" type="text" name="candidate" placeholder="Search"/>
             </div>
 
         </div>
