@@ -20,4 +20,6 @@ export const candidates = [
     candidate8,
 ]
 
-export const candidatesIcon = <i className="fas fa-users"></i>
+export const candidatesIcon = <i className="fas fa-users"></i>;
+export const loginUrl = "http://localhost:3333/login";
+export const homePageUrl = "http://localhost:3000/home";
