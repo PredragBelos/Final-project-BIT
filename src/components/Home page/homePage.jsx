@@ -1,4 +1,7 @@
 import React from 'react';
+import CandidateCards from '../Candidate cards/candidateCards';
+import Footer from '../Footer/footer';
+import Header from '../Header/header';
 import './css/homePage.css';
 
 const HomePage = () => {
@@ -10,8 +13,10 @@ const HomePage = () => {
 
     //RENDER
     return (
-        <div className="homePage">
-            
+        <div className="container-flow homePage">
+                <Header />
+                <CandidateCards />
+                <Footer />
         </div>
     );
 };
