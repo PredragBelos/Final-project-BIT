@@ -11,7 +11,7 @@ const Footer = () => {
     //RENDER
     return (
         <footer className="container-flow footer">
-            <p>Copiright BIT 2021</p>
+            <p className="footerPar">Copiright BIT 2021</p>
         </footer>
     );
 };
