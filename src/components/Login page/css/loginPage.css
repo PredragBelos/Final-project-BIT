@@ -1,0 +1,105 @@
+*{
+    font-family: 'Crimson Text', serif;
+}
+
+
+.loginPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(51, 51, 51);
+}
+
+.loginForm {
+    width: 300px; 
+    padding-bottom: 25px;
+    background-color: rgb(51, 51, 51);
+    border: 1px solid rgb(255, 173, 51);
+    border-radius: 5px;
+}
+
+.loginHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: rgb(255, 173, 51);
+}
+
+.loginHeading p{
+    margin:0px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color:rgb(51, 51, 51)
+}
+
+label{
+    color: rgb(255, 173, 51);
+    font-size: 18px;
+}
+
+.loginInput{
+    width: 90%;
+    margin: 0px auto;
+    padding-top: 20px;
+
+}
+
+input[type=text], input[type=password] {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    background-color: rgba(255, 173, 51, 0.2);
+    color: rgb(255, 173, 51);
+    border: 1px solid rgb(255, 173, 51);
+    border-radius: 5px;
+}
+
+  
+    
+.loginBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+button {
+    width: 150px;
+    padding: 14px 20px;
+    margin: 30px 0;
+    background-color: rgb(255, 173, 51);
+    color: rgb(51, 51, 51);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+button:hover {
+    opacity: 0.8;
+}
+  
+  
+  /* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+  
