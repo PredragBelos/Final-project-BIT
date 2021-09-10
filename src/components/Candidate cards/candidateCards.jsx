@@ -42,12 +42,12 @@ const CandidateCards = () => {
                     (candidatesData.length === filteredCandidates.length)
                     ? candidatesData.map(candidate => {
                         return (
-                            <CandidateCard name={candidate.name} image={candidate.image} email={candidate.email} id={candidate.id} key={candidate.id} />
+                            <CandidateCard name={candidate.name} email={candidate.email} id={candidate.id} key={candidate.id} />
                         )
                     })
                     : filteredCandidates.map(candidate => {
                         return (
-                            <CandidateCard name={candidate.name} image={candidate.image} email={candidate.email} id={candidate.id} key={candidate.id} />
+                            <CandidateCard name={candidate.name} email={candidate.email} id={candidate.id} key={candidate.id} />
                         )
                     })
                 }
