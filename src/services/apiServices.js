@@ -1,5 +1,6 @@
 import { Candidate } from "../entitys/candidate";
-import { getCandidateUrl } from "../shared/publicData";
+import { Company } from "../entitys/company";
+import { getCandidateUrl, getCompanyUrl } from "../shared/publicData";
 
 /*Function for get candidate data from API and create entity*/
 export async function getCandidate() {
@@ -19,4 +20,25 @@ export async function getCandidate() {
     })
     
     return candidateArray;
+}
+
+
+/*Function for get company data from API and create entity*/
+export async function getCompany() {
+    let request = await fetch
+        (
+            getCompanyUrl,
+            {
+                method: "GET",
+                headers: { "Authorization": `Bearer ${localStorage.getItem("apiKey")}` }
+            }
+        );
+
+    let data = await request.json();
+
+    let companyArray = await data.map(company => {
+        return new Company(company.id, company.name);
+    })
+    
+    return companyArray;
 }
