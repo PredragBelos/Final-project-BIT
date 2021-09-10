@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/candidate.css';
 
-const CandidateCard = ({name, image, email}) => {
+const CandidateCard = ({name, image, email, id}) => {
     //STATE
 
     //LIFECICLE
