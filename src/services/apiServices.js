@@ -17,7 +17,7 @@ export async function getCandidate() {
     let data = await request.json();
 
     let candidateArray = await data.map(candidate => {
-        return new Candidate(candidate.id ,candidate.name, candidate.email, candidate.birthday, candidate.education, "https://icon-library.com/images/user-icon-png/user-icon-png-27.jpg");
+        return new Candidate(candidate.id ,candidate.name, candidate.email, candidate.birthday, candidate.education);
     })
     
     return candidateArray;

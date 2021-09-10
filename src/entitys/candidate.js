@@ -1,7 +1,7 @@
 
 /*Class that present a candidates objects*/
 export class Candidate {
-    constructor(id, name, email, dateOfBirth, education, image) {
+    constructor(id, name, email, dateOfBirth, education) {
         try {
             if (!id) {
                 throw new Error("Candidate id must be defined!");
@@ -36,10 +36,14 @@ export class Candidate {
             this.email = email;
             this.dateOfBirth = new Date(dateOfBirth);
             this.education = education;
-            this.image = image;
 
         } catch (error) {
             console.log(error.message);
         }
+    }
+
+    getBirthday(){
+        let result = `${this.dateOfBirth.getDate()}.${this.dateOfBirth.getMonth() +1 }.${this.dateOfBirth.getFullYear()}.`;
+        return result;
     }
 }
