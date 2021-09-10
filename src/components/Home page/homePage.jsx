@@ -1,5 +1,4 @@
 import React from 'react';
-import { getInterview } from '../../services/apiServices';
 import CandidateCards from '../Candidate cards/candidateCards';
 import Footer from '../Footer/footer';
 import Header from '../Header/header';
@@ -11,7 +10,7 @@ const HomePage = () => {
     //LIFECICLE
 
     //FUNCTIONS
-    getInterview();
+    
     //RENDER
     return (
         <div className="container-flow homePage">
