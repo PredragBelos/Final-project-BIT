@@ -1,9 +1,10 @@
-import HomePage from '../Home page/homePage';
-import './App.css';
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route } from 'react-router';
 import LoginPage from '../Login page/loginPage';
+import HomePage from '../Home page/homePage';
 import CandidateReportPage from '../Candidate report page/candidateReportPage';
+import './App.css';
+
 
 function App() {
   return (

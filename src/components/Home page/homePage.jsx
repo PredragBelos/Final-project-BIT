@@ -10,7 +10,7 @@ const HomePage = () => {
     //LIFECICLE
 
     //FUNCTIONS
-
+    
     //RENDER
     return (
         <div className="container-flow homePage">
