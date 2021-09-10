@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.logo p{
+.logoText{
     margin: 0px;
     font-size: 25px;
     color: rgb(255, 173, 51);
@@ -39,22 +39,27 @@
     justify-content: center;
 }
 
-.candidatesBtn a{
+.candidateLink{
     font-size: 18px;
     color: rgb(255, 173, 51);
     text-decoration: none;
-    margin: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 10px;
 }
 
-.candidatesBtn i{
-    font-size: 18px;
+.candidateLink:hover{
     color: rgb(255, 173, 51);
 }
 
+.candidateIcon{
+    stroke: rgb(255, 173, 51);
+    width: 30px;
+    height: 30px;
+    
+}
 
 /*Media screen style*/
 @media screen and (min-width: 1400px) and (max-width: 6000px) {
-    .logo p{
+    .logoText{
         width: 210px;
     }
 
@@ -64,7 +69,7 @@
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
-    .logo p{
+    .logoText{
         width: 210px;
     }
 
@@ -74,7 +79,7 @@
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
-    .logo p{
+    .logoText{
         width: 210px;
     }
 
@@ -84,7 +89,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-    .logo p{
+    .logoText{
         width: 210px;
     }
 
@@ -94,7 +99,7 @@
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-    .logo p{
+    .logoText{
         width: 210px;
     }
 
@@ -108,7 +113,7 @@
         justify-content: center;
     }
 
-    .logo p{
+    .logoText{
         width: 210px;
     }
 
@@ -121,7 +126,7 @@
         width: 50px;
     }
 
-    .candidatesBtn a{
+    .candidateLink{
        display: none;
     }
 }

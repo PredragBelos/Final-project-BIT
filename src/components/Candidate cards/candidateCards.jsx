@@ -1,31 +1,58 @@
-import React from 'react';
-import { candidates } from '../../shared/publicData';
+import React, { useEffect, useState } from 'react';
+import { setCandidate } from '../../services/candidateCardsFunction';
 import CandidateCard from '../Candidate/candidate';
 import SearchBox from '../Search box/searchBox';
 import './css/candidateCards.css';
 
 const CandidateCards = () => {
+    
     //STATE
+    const [candidatesData, setCandidatesData] = useState([]);
+    const [filteredCandidates, setFilteredCandidates] = useState([]);
 
     //LIFECICLE
+    useEffect(() => {
+
+        /* Set candidate data for CandidateCard*/
+        setCandidate(setCandidatesData);
+
+        /*Set first state of filteredCandidates*/
+        setCandidate(setFilteredCandidates);
+
+    }, [])
+
 
     //FUNCTIONS
 
+    /*Function for set filteredCandidates that comback from searchBar*/
+    const setFilteredCandidatesProps = filteredCandidates => setFilteredCandidates(filteredCandidates);
+    
+    
     //RENDER
     return (
         <div className="container candidateCards">
-            <SearchBox/>
+            
+            <SearchBox 
+            candidatesData = {candidatesData}
+            setFilteredCandidates = {setFilteredCandidatesProps}
+            />
+
             <div className="row cardsRow">
                 {
-                    candidates.map((candidate, index) => {
+                    (candidatesData.length === filteredCandidates.length)
+                    ? candidatesData.map(candidate => {
                         return (
-                            <CandidateCard name={candidate.name} image={candidate.image} email={candidate.email}key={index}/>
+                            <CandidateCard name={candidate.name} image={candidate.image} email={candidate.email} id={candidate.id} key={candidate.id} />
+                        )
+                    })
+                    : filteredCandidates.map(candidate => {
+                        return (
+                            <CandidateCard name={candidate.name} image={candidate.image} email={candidate.email} id={candidate.id} key={candidate.id} />
                         )
                     })
                 }
-        
             </div>
-            
+
         </div>
     );
 };

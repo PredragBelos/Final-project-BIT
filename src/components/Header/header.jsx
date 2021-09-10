@@ -14,17 +14,20 @@ const Header = () => {
     return (
         <div className="container-flow header">
             <div className="container headerContainer">
+
                 <div className="logo">
-                    <p>Interviews Reports</p>
+                    <p className="logoText">Interviews Reports</p>
                 </div>
 
                 <div className="candidatesSection">
+
                     <div className="candidatesBtn">
                         {candidatesIcon}
-                        <Link href="#">Candidates</Link>
-
+                        <Link className="candidateLink" to="/home">Candidates</Link>
                     </div>
+
                 </div>
+
             </div>
         </div>
     );
