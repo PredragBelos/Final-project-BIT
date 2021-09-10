@@ -1,6 +1,7 @@
 import { Candidate } from "../entitys/candidate";
 import { Company } from "../entitys/company";
-import { getCandidateUrl, getCompanyUrl } from "../shared/publicData";
+import { Interview } from "../entitys/interview";
+import { getCandidateUrl, getCompanyUrl, getInterviewUrl } from "../shared/publicData";
 
 /*Function for get candidate data from API and create entity*/
 export async function getCandidate() {
@@ -41,4 +42,25 @@ export async function getCompany() {
     })
     
     return companyArray;
+}
+
+
+/*Function for get interview data from API and create entity*/
+export async function getInterview() {
+    let request = await fetch
+        (
+            getInterviewUrl,
+            {
+                method: "GET",
+                headers: { "Authorization": `Bearer ${localStorage.getItem("apiKey")}` }
+            }
+        );
+
+    let data = await request.json();
+
+    let interviewArray = await data.map(interview => {
+        return new Interview(interview.id, interview.interviewDate, interview.note, interview.phase, interview.status, interview.companyId, interview.companyName, interview.candidateId, interview.candidateName);
+    });
+    
+    console.log(interviewArray);
 }
