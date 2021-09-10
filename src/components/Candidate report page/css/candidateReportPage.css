@@ -65,13 +65,17 @@
     .smaller {
         font-size: 18px;
     }
+
+    .bigger{
+        font-size: 24px;
+    }
     
 }
 
 @media screen and (min-width:1200px) and (max-width:1400px) {
 
     .bigger {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .smaller {
@@ -92,7 +96,7 @@
     }
 
     .bigger {
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 500;
     }
 
@@ -174,7 +178,7 @@
 @media screen and (min-width:0px) and (max-width:576px) {
 
     .candidateImg {
-        width: 300px;
+        width: 320px;
         height: 250px;
     }
 
@@ -193,7 +197,7 @@
     .candidateInfos {
         flex-direction: column;
         height: 250px;
-        width: 300px;
+        width: 320px;
     }
 
     .infoBorder {

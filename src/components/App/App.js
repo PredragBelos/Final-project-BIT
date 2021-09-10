@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Route path="/home" component={HomePage}/>
       <Route path="/login" component={LoginPage}/>
-      <Route path="/candidate/:name" component={CandidateReportPage}/>
+      <Route path="/candidate:name" component={CandidateReportPage}/>
     </div>
   );
 }

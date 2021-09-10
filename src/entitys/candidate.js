@@ -42,4 +42,9 @@ export class Candidate {
             console.log(error.message);
         }
     }
+
+    getBirthday(){
+        let result = `${this.dateOfBirth.getDate()}.${this.dateOfBirth.getMonth() +1 }.${this.dateOfBirth.getFullYear()}.`;
+        return result;
+    }
 }
