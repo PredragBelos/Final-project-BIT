@@ -220,26 +220,39 @@
     .candidateDta {
         flex-direction: column;
     }
+
 }
 
 /* Table style */
 
 .interviewTable {
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid rgb(51, 51, 51);
     width: 1320px;
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 173, 51);
 }
 
 .interviewTableHeading {
-    border: solid 1px black;
+    border: solid 1px rgb(51, 51, 51);
+    text-align: center;
+    font-size: 22px;
+    text-align: center;
 }
 
 .interviewTableRow {
-    border: solid 1px black;
+    border: solid 1px rgb(51, 51, 51);
+    background-color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.interviewTableRow td {
+    font-size: 22px;
 }
 
 .interviewTable td {
-    border: solid 1px black;
+    border: solid 1px rgb(51, 51, 51);
     height: 30px;
 }
 
@@ -250,7 +263,94 @@
 }
 
 .reportOverview {
-    width: 80px;
+    width: 60px;
 }
 
+.tableStatus {
+    padding-right: 60px;
+}
 
+@media screen and (min-width:1200px) and (max-width:1400px) {
+    .interviewTable {
+        width: 100%;
+    }
+
+    .interviewTableHeading {
+        font-size: 24px;
+    }
+
+    .interviewTableRow td {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+    
+    .interviewTable {
+        width: 100%;
+    }
+
+    .interviewTableHeading {
+        font-size: 22px;
+    }
+
+    .interviewTableRow td {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .interviewTable {
+        width: 100%;
+    }
+
+    .interviewTableHeading {
+        font-size: 20px;
+    }
+
+    .interviewTableRow td {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:768px) {
+    .interviewTable {
+        width: 100%;
+    }
+
+    .interviewTableHeading {
+        font-size: 18px;
+    }
+
+    .interviewTableRow td {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:576px) {
+    .interviewTable {
+        width: 320px;
+    }
+
+    .interviewTableHeading {
+        font-size: 16px;
+    }
+
+    .interviewTableRow td {
+        font-size: 14px;
+    }
+
+    .candidateInterviewTableHeading {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .reportOverview {
+        width: 40px;
+    }
+
+    .tableStatus {
+        padding-right: 40px;
+    }
+    
+}
