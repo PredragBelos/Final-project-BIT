@@ -62,5 +62,5 @@ export async function getInterview() {
         return new Interview(interview.id, interview.interviewDate, interview.note, interview.phase, interview.status, interview.companyId, interview.companyName, interview.candidateId, interview.candidateName);
     });
     
-    console.log(interviewArray);
+    return interviewArray;
 }

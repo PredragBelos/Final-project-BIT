@@ -9,3 +9,4 @@ export const getInterviewUrl = "http://localhost:3333/api/reports";
 function openPage () {
     window.open("http://localhost:3000/home", "_self");
 }
+
