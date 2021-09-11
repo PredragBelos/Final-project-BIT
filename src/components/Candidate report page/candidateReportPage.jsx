@@ -103,7 +103,7 @@ const CandidateReportPage = (props) => {
 
                     <section className="candidateInterviews">
 
-                        <table className="interviewTable">
+                        <table align="center" className="interviewTable">
 
                             <tbody>
 
@@ -113,7 +113,7 @@ const CandidateReportPage = (props) => {
 
                                     <td>Interview Date</td>
 
-                                    <td colSpan="2">Status</td>
+                                    <td colSpan="2" className="tableStatus">Status</td>
 
                                 </tr>
 
@@ -140,8 +140,6 @@ const CandidateReportPage = (props) => {
                                         )
                                     })
                                 }
-
-                        
 
                             </tbody>
 
