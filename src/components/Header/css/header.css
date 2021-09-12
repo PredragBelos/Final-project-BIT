@@ -50,12 +50,6 @@
     color: rgb(255, 173, 51);
 }
 
-.candidateIcon{
-    stroke: rgb(255, 173, 51);
-    width: 30px;
-    height: 30px;
-    
-}
 
 /*Media screen style*/
 @media screen and (min-width: 1400px) and (max-width: 6000px) {

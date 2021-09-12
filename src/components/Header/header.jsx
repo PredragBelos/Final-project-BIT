@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { candidatesIcon } from '../../shared/publicData';
+import CandidateIcon from '../Candidate icon/candidateIcon';
 import './css/header.css';
 
 const Header = () => {
@@ -22,7 +23,7 @@ const Header = () => {
                 <div className="candidatesSection">
 
                     <div className="candidatesBtn">
-                        {candidatesIcon}
+                        <CandidateIcon/>
                         <Link className="candidateLink" to="/home">Candidates</Link>
                     </div>
 
