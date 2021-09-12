@@ -47,4 +47,8 @@ export class Interview {
             console.log(error.message);
         }
     }
+    getInterviewDate() {
+        let result = `${this.interviewDate.getDate()}.${this.interviewDate.getMonth() + 1}.${this.interviewDate.getUTCFullYear()}.`;
+        return result;
+    }
 }
