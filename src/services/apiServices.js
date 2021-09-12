@@ -1,6 +1,6 @@
-import { Candidate } from "../entitys/candidate";
-import { Company } from "../entitys/company";
-import { Interview } from "../entitys/interview";
+import { Candidate } from "../entities/candidate";
+import { Company } from "../entities/company";
+import { Interview } from "../entities/interview";
 import { getCandidateUrl, getCompanyUrl, getInterviewUrl } from "../shared/publicData";
 
 /*Function for get candidate data from API and create entity*/

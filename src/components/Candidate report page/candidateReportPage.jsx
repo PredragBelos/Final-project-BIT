@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getCandidate, getInterview } from "../../services/apiServices";
-import { previewMore } from "../../shared/publicData";
 import Footer from "../Footer/footer";
 import Header from "../Header/header";
 import PreviewDetails from "../Preview Details/previewDetails";
