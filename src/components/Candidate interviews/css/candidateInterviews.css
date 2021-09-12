@@ -39,7 +39,13 @@
 }
 
 .reportOverview {
-    width: 60px;
+    width: 40px;
+    padding: 0px;
+}
+
+.reportOverview img{
+    height: 30px;
+    margin-bottom: 3px;
 }
 
 .tableStatus {
@@ -58,6 +64,11 @@
     .interviewTableRow td {
         font-size: 22px;
     }
+
+    .reportOverview img{
+        height: 30px;
+        margin-bottom: 3px;
+    }
 }
 
 @media screen and (min-width:992px) and (max-width:1200px) {
@@ -73,6 +84,11 @@
     .interviewTableRow td {
         font-size: 20px;
     }
+
+    .reportOverview img{
+        height: 28px;
+        margin-bottom: 2px;
+    }
 }
 
 @media screen and (min-width:768px) and (max-width:992px) {
@@ -87,6 +103,11 @@
     .interviewTableRow td {
         font-size: 18px;
     }
+
+    .reportOverview img{
+        height: 26px;
+        margin-bottom: 2px;
+    }
 }
 
 @media screen and (min-width:576px) and (max-width:768px) {
@@ -100,6 +121,11 @@
 
     .interviewTableRow td {
         font-size: 16px;
+    }
+
+    .reportOverview img{
+        height: 24px;
+        margin-bottom: 2px;
     }
 }
 
@@ -127,6 +153,11 @@
 
     .tableStatus {
         padding-right: 40px;
+    }
+
+    .reportOverview img{
+        height: 22px;
+        margin-bottom: 1px;
     }
     
 }

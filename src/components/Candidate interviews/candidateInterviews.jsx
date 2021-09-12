@@ -1,5 +1,4 @@
 import React from 'react';
-import PreviewDetails from '../Preview Details/previewDetails';
 import './css/candidateInterviews.css';
 
 
@@ -27,7 +26,7 @@ function CandidateInterviews({candidateInterviews}) {
                                     <td>{interview.getInterviewDate()}</td>
                                     <td>{interview.status}</td>
                                     <td className="reportOverview">
-                                        < PreviewDetails interview={interview} />
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2PrxTVZdfUDOdYQsDHBY8wYkw2yPqVjH4a41tQ_vbwr27aQC4id1Mv2LJucuazQQOSe0&usqp=CAU" alt="det.." />
                                     </td>
 
                                 </tr>
