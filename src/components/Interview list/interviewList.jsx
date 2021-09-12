@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/iterviewList.css';
+import './css/interviewList.css';
 
 const InterviewList = () => {
 
