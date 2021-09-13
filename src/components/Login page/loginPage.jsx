@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { homePageUrl, loginUrl } from '../../shared/publicData';
+import LoginAlert from "../Login alert/loginAlert";
 import './css/loginPage.css';
 
 const LoginPage = () => {
     //STATE
     const [usernameInput, setUsernameInput] = useState("");
     const [passwordInput, setPasswordInput] = useState("");
+    const [alertVisability, setAlertVisibility] = useState(false);
 
 
     //LIFECICLE
@@ -16,6 +18,9 @@ const LoginPage = () => {
     }, [])
 
     //FUNCTIONS
+
+    /* Function for set alert visibility on alert screen */
+    const setAlertVisibilityProps = alertVisability => setAlertVisibility(alertVisability);
 
     /* Function for login to home page */
     async function login() {
@@ -42,7 +47,7 @@ const LoginPage = () => {
                     usernameInput.value ="";
                     passwordInput.value= "";
                     
-                    alert("Username or password is incorrect!");
+                    setAlertVisibility(true);
                 }
             })
     }
@@ -74,6 +79,8 @@ const LoginPage = () => {
                 </div>
 
             </div>
+
+            <LoginAlert setAlertVisibility = {setAlertVisibilityProps} alertVisibility = {alertVisability} />
         </div>
     );
 };
