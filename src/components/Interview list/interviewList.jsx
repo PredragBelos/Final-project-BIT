@@ -1,4 +1,5 @@
 import React from 'react';
+import ReportPageSearch from '../Report page searchbox/reportPageSearch';
 import './css/interviewList.css';
 
 const InterviewList = () => {
@@ -11,8 +12,8 @@ const InterviewList = () => {
 
     //RENDER
     return (
-        <div className="interviewList">
-            
+        <div className="container interviewList">
+            <ReportPageSearch/>
         </div>
     );
 }
