@@ -2,8 +2,14 @@ import React from 'react';
 import './css/candidateInterviews.css';
 
 
-function CandidateInterviews({ candidateInterviews }) {
+function CandidateInterviews({ candidateInterviews, setModalVisibility, setInterviewID }) {
 
+
+    //FUNCTIONS
+    const clickOnDetails = (e) => {
+        setModalVisibility(true);
+        setInterviewID(e.target.id);
+    }
     return (
         <section className=" container candidateInterviews">
             <table align="center" className="interviewTable">
@@ -27,7 +33,7 @@ function CandidateInterviews({ candidateInterviews }) {
                                         <td>{interview.getInterviewDate()}</td>
                                         <td>{interview.status}</td>
                                         <td className="reportOverview">
-                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2PrxTVZdfUDOdYQsDHBY8wYkw2yPqVjH4a41tQ_vbwr27aQC4id1Mv2LJucuazQQOSe0&usqp=CAU" alt="det.." />
+                                            <img onClick={clickOnDetails} id={interview.interviewID} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2PrxTVZdfUDOdYQsDHBY8wYkw2yPqVjH4a41tQ_vbwr27aQC4id1Mv2LJucuazQQOSe0&usqp=CAU" alt="det.." />
                                         </td>
 
                                     </tr>
