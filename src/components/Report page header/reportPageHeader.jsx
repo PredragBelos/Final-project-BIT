@@ -23,7 +23,7 @@ const ReportPageHeader = () => {
 
                     <div className="reportsOpt">
                         <div className="previewReports btnStile">Reports</div>
-                        <div className="createReportOpt btnStile">Crete Report</div>
+                        <div className="createReportOpt btnStile">Create Report</div>
                     </div>
 
                 </div>
