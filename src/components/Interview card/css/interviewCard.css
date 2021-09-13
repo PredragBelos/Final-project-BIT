@@ -1,0 +1,118 @@
+.interviewCard{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 173, 51, 0.8);
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.repCompany{
+    flex-grow: 1;
+    border-right: 2px dotted rgb(51, 51, 51);
+}
+
+.repCandidate{
+    flex-grow: 1;
+    border-right: 2px dotted rgb(51, 51, 51);
+}
+
+.repDate{
+    flex-grow: 1;
+    border-right: 2px dotted rgb(51, 51, 51);
+}
+
+.repStatus{
+    flex-grow: 1;
+    border-right: 2px dotted rgb(51, 51, 51);
+}
+
+.repBtns{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.repBtns img{
+    height: 30px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.repValue{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    margin: 0px;
+}
+
+.repTitle{
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    margin: 0px;
+}
+
+/*Media screen style*/
+@media screen and (min-width: 0px) and (max-width: 992px) {
+    .interviewCard{
+        flex-direction: column;
+    }
+
+    .repCompany{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-bottom: 2px dotted rgb(51, 51, 51);
+        border-right: 0px;
+    }
+
+    .repCandidate{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-bottom: 2px dotted rgb(51, 51, 51);
+        border-right: 0px;
+    }
+
+    .repDate{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-bottom: 2px dotted rgb(51, 51, 51);
+        border-right: 0px;
+    }
+
+    .repStatus{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-bottom: 2px dotted rgb(51, 51, 51);
+        border-right: 0px;
+    }
+
+    .repBtns{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .interviewCard{
+        width: 500px;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    .interviewCard{
+        width: 320px;
+        margin: 10px auto;
+    }
+}
+
