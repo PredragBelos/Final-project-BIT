@@ -36,7 +36,7 @@ const CandidateReportPage = (props) => {
             setInterview(result.filter(item => { return parseInt(item.interviewID) === parseInt(interviewId)}));
         })
 
-    }, [interviewId])
+    }, [interviewId, candidateId])
 
 
     //FUNCTIONS
