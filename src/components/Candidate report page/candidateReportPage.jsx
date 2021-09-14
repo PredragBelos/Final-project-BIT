@@ -4,12 +4,16 @@ import CandidateDetail from "../Candidate detail/candidateDetail";
 import CandidateInterviews from "../Candidate interviews/candidateInterviews";
 import Footer from "../Footer/footer";
 import Header from "../Header/header";
+import Modal from "../Modal/modal";
 import "./css/candidateReportPage.css";
 
 const CandidateReportPage = (props) => {
     //STATE
     const [curentCandidate, setCurentCandidate] = useState("");
     const [candidateInterviews, setCandidateInterviews] = useState([]);
+    const [modalVisibility, setModalVisibility] = useState(false);
+    const [interviewId, setInterviewID] = useState(0);
+    const [interview, setInterview] = useState([]);
 
     let candidateId = parseInt(props.match.params.name.slice(1, props.match.params.name.length));
 
@@ -27,10 +31,17 @@ const CandidateReportPage = (props) => {
             setCandidateInterviews(result.filter(item => { return item.candidateId === candidateId }));
         })
 
-    }, [candidateId])
+        /*Set interview*/
+        getInterview().then(result => {
+            setInterview(result.filter(item => { return parseInt(item.interviewID) === parseInt(interviewId)}));
+        })
+
+    }, [interviewId, candidateId])
 
 
     //FUNCTIONS
+    const setModalVisibilityProps = modalVisibility => setModalVisibility(modalVisibility);
+    const setInterviewIDProps = interviewId => setInterviewID(interviewId);
 
 
     //RENDER
@@ -47,7 +58,9 @@ const CandidateReportPage = (props) => {
                         <h1 className="candidateInterviewTableHeading">Reports</h1>
                     </div>
 
-                    <CandidateInterviews candidateInterviews={candidateInterviews} />
+                    <CandidateInterviews candidateInterviews={candidateInterviews} setModalVisibility={setModalVisibilityProps} setInterviewID={setInterviewIDProps} />
+                    
+                    <Modal modalVisibility={modalVisibility} setModalVisibility={setModalVisibilityProps} interview={interview} />
 
                 </div>
 
