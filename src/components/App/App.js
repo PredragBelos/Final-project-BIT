@@ -5,6 +5,7 @@ import HomePage from '../Home page/homePage';
 import CandidateReportPage from '../Candidate report page/candidateReportPage';
 import './App.css';
 import ReportPage from '../Reports page/reportPage';
+import ErrorPage from '../Error page/errorPage';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="/login" component={LoginPage} />
       <Route path="/candidate:name" component={CandidateReportPage} />
       <Route path="/reports" component={ReportPage} />
+      <Route path="/error" component={ErrorPage}/>
     </div>
   );
 }

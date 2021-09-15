@@ -25,15 +25,24 @@ const CandidateReportPage = (props) => {
         getCandidate().then(result => {
             setCurentCandidate(result.filter(item => { return item.id === candidateId }));
         })
+        .catch(() => {
+            window.open("http://localhost:3000/error","_self");
+        })
 
         /*Set candidate interviews*/
         getInterview().then(result => {
             setCandidateInterviews(result.filter(item => { return item.candidateId === candidateId }));
         })
+        .catch(() => {
+            window.open("http://localhost:3000/error","_self");
+        })
 
         /*Set interview*/
         getInterview().then(result => {
             setInterview(result.filter(item => { return parseInt(item.interviewID) === parseInt(interviewId)}));
+        })
+        .catch(() => {
+            window.open("http://localhost:3000/error","_self");
         })
 
     }, [interviewId, candidateId])

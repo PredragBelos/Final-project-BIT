@@ -3,5 +3,6 @@ export const homePageUrl = "http://localhost:3000/home";
 export const getCandidateUrl = "http://localhost:3333/api/candidates";
 export const getCompanyUrl = "http://localhost:3333/api/companies";
 export const getInterviewUrl = "http://localhost:3333/api/reports";
+export const errorPageUrl = "http://localhost:3000/error";
 
 
