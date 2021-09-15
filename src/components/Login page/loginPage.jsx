@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { homePageUrl, loginUrl } from '../../shared/publicData';
+import { errorPageUrl, homePageUrl, loginUrl } from '../../shared/publicData';
 import LoginAlert from "../Login alert/loginAlert";
 import './css/loginPage.css';
 
@@ -23,8 +23,8 @@ const LoginPage = () => {
     const setAlertVisibilityProps = alertVisability => setAlertVisibility(alertVisability);
 
     /* Function for login to home page */
-    async function login() {
-        return await fetch(
+    const login = () => {
+        return fetch(
             loginUrl,
             {
                 method: "POST",
@@ -49,6 +49,9 @@ const LoginPage = () => {
                     
                     setAlertVisibility(true);
                 }
+            })
+            .catch(error => {
+                window.open(errorPageUrl,"_self");
             })
     }
 

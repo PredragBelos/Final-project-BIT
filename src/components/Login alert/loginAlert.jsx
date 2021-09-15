@@ -1,9 +1,9 @@
 import React from 'react';
 import './css/loginAlert.css';
 
-function LoginAlert({setAlertVisibility, alertVisibility}) {
+const LoginAlert = ({ setAlertVisibility, alertVisibility }) => {
 
-    const alertVisb = (alertVisibility)? "modal display-block" : "modal display-none"
+    const alertVisb = (alertVisibility) ? "modal display-block" : "modal display-none"
 
     // STATE
 
@@ -11,22 +11,24 @@ function LoginAlert({setAlertVisibility, alertVisibility}) {
     //LIFECICLE
 
     //FUNCTIONS
+
+    /* Functon for close alert component */
     const closeAlert = () => {
-        setAlertVisibility(false);
+        (alertVisibility) ? setAlertVisibility(false) : setAlertVisibility(true);
     }
     //RENDER
     return (
         <div className={`${alertVisb} alert`}>
-                <section className="alert-main alertSection">
-                    <header className="alertHeader">
-                        <p className="alertHeading">Alert</p>
-                    </header>
-                    <div className="alertMessageSection">
-                        <p className="alertMessage">Username or password is incorrect!</p>
-                        <button className="alertBtn" onClick={closeAlert}>OK</button>
-                    </div>
-                </section>
-            </div>
+            <section className="alert-main alertSection">
+                <header className="alertHeader">
+                    <p className="alertHeading">Alert</p>
+                </header>
+                <div className="alertMessageSection">
+                    <p className="alertMessage">Username or password is incorrect!</p>
+                    <button className="alertBtn" onClick={closeAlert}>OK</button>
+                </div>
+            </section>
+        </div>
     );
 }
 

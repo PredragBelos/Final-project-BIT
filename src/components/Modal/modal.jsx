@@ -5,10 +5,10 @@ function Modal({ modalVisibility, setModalVisibility, interview }) {
     //VARIABLES
     const showHideClassName = modalVisibility ? "modal display-block" : "modal display-none";
 
-    
+
     //FUNCTIONS
     const closeModal = () => {
-        setModalVisibility(false);
+        (modalVisibility) ? setModalVisibility(false) : setModalVisibility(true);
     }
 
 
