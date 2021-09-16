@@ -1,5 +1,6 @@
 .candidateInterviews{
     padding: 0px;
+    padding-bottom: 30px;
 }
 .interviewTable {
     border-collapse: collapse;
@@ -130,8 +131,14 @@
 }
 
 @media screen and (min-width:0px) and (max-width:576px) {
+
+    .candidateInterviews{
+        max-width: 320px;
+        overflow-x: auto;
+    }
+
     .interviewTable {
-        width: 320px;
+        width: 576px;
     }
 
     .interviewTableHeading {
