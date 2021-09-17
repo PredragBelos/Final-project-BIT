@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getCandidate, getInterview } from "../../services/apiServices";
+import { errorPageUrl } from "../../shared/publicData";
 import CandidateDetail from "../Candidate detail/candidateDetail";
 import CandidateInterviews from "../Candidate interviews/candidateInterviews";
 import Footer from "../Footer/footer";
@@ -26,7 +27,7 @@ const CandidateReportPage = (props) => {
             setCurentCandidate(result.filter(item => { return item.id === candidateId }));
         })
         .catch(() => {
-            window.open("http://localhost:3000/error","_self");
+            window.open(errorPageUrl,"_self");
         })
 
         /*Set candidate interviews*/
@@ -34,7 +35,7 @@ const CandidateReportPage = (props) => {
             setCandidateInterviews(result.filter(item => { return item.candidateId === candidateId }));
         })
         .catch(() => {
-            window.open("http://localhost:3000/error","_self");
+            window.open(errorPageUrl,"_self");
         })
 
         /*Set interview*/
@@ -42,7 +43,7 @@ const CandidateReportPage = (props) => {
             setInterview(result.filter(item => { return parseInt(item.interviewID) === parseInt(interviewId)}));
         })
         .catch(() => {
-            window.open("http://localhost:3000/error","_self");
+            window.open(errorPageUrl,"_self");
         })
 
     }, [interviewId, candidateId])
