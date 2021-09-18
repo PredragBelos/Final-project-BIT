@@ -10,7 +10,7 @@ const CandidateCard = ({name, email, id}) => {
 
     /*Function for open candidate report page*/
     const openCandidatePage = () => {
-        window.open(window.open(`/candidate:${id}`,"_self"));
+        window.open(window.open(`http://localhost:3000/candidate/:${id}`,"_self"));
     }
 
 
