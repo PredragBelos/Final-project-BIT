@@ -13,6 +13,7 @@ const InterviewList = () => {
     const [modalVisibility, setModalVisibility] = useState(false);
     const [interviewId, setInterviewID] = useState(0);
     const [interview, setInterview] = useState([]);
+    const [filteredInterviews, setFilteredInterviews] = useState([]);
 
 
     //LIFECICLE
@@ -21,6 +22,7 @@ const InterviewList = () => {
         /* Set interview list*/
         getInterview().then(items => {
             setInterviews(items);
+            setFilteredInterviews(items);
         })
 
         /*Set interview*/
@@ -34,14 +36,19 @@ const InterviewList = () => {
     //FUNCTIONS
     const setModalVisibilityProps = modalVisibility => setModalVisibility(modalVisibility);
     const setInterviewIDProps = interviewId => setInterviewID(interviewId);
+    const setFilteredInterviewsProps = filteredInterviews => setFilteredInterviews(filteredInterviews);
 
   
     //RENDER
     return (
         <div className="container interviewList">
-            <ReportPageSearch />
+            <ReportPageSearch interviews={interviews} setFilteredInterviews={setFilteredInterviewsProps} />
             {
-                interviews.map(result => {
+                (interviews.length === filteredInterviews.length)
+                ? interviews.map(result => {
+                    return <InterviewCard interview={result} setInterviewID={setInterviewIDProps} setModalVisibility={setModalVisibilityProps} key={result.interviewID} />
+                })
+                : filteredInterviews.map(result => {
                     return <InterviewCard interview={result} setInterviewID={setInterviewIDProps} setModalVisibility={setModalVisibilityProps} key={result.interviewID} />
                 })
             }

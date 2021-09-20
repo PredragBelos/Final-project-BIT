@@ -71,6 +71,7 @@ export class Interview {
            this.companyName = companyName;
            this.candidateId = candidateId;
            this.candidateName = candidateName;
+           this.filterParams = `${candidateName} ${companyName}`;
 
         } catch (error) {
             console.log(error.message);
