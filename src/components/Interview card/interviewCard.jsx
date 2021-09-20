@@ -1,14 +1,17 @@
 import React from 'react';
-import Modal from '../Modal/modal';
 import './css/interviewCard.css';
 
-const InterviewCard = ({interview}) => {
+const InterviewCard = ({interview, setInterviewID, setModalVisibility}) => {
 
     //STATE
 
     //LIFECICLE
 
     //FUNCTIONS
+    const clickOnDetails = (e) => {
+        setModalVisibility(true);
+        setInterviewID(e.target.id);
+    }
 
     //RENDER
     return (
@@ -34,7 +37,7 @@ const InterviewCard = ({interview}) => {
             </div>
 
             <div className="repBtns">
-                <img id={interview.interviewID} src="https://icon-library.com/images/more-icon/more-icon-16.jpg" alt="det.." />
+                <img id={interview.interviewID} onClick={clickOnDetails} src="https://icon-library.com/images/more-icon/more-icon-16.jpg" alt="det.." />
                 <img src="https://static.vecteezy.com/system/resources/thumbnails/001/192/558/small/x-line.png" alt="det.." />
             </div>
 

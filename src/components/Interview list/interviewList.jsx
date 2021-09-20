@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react/cjs/react.development';
 import { getInterview } from '../../services/apiServices';
 import InterviewCard from '../Interview card/interviewCard';
+import Modal from '../Modal/modal';
 import ReportPageSearch from '../Report page searchbox/reportPageSearch';
 import './css/interviewList.css';
 
@@ -9,6 +10,9 @@ const InterviewList = () => {
 
     //STATE
     const [interviews, setInterviews] = useState([]);
+    const [modalVisibility, setModalVisibility] = useState(false);
+    const [interviewId, setInterviewID] = useState(0);
+    const [interview, setInterview] = useState([]);
 
 
     //LIFECICLE
@@ -19,21 +23,29 @@ const InterviewList = () => {
             setInterviews(items);
         })
 
-    },[])
+        /*Set interview*/
+        getInterview().then(result => {
+            setInterview(result.filter(item => { return parseInt(item.interviewID) === parseInt(interviewId) }));
+        })
+
+    }, [interviewId])
 
 
     //FUNCTIONS
+    const setModalVisibilityProps = modalVisibility => setModalVisibility(modalVisibility);
+    const setInterviewIDProps = interviewId => setInterviewID(interviewId);
 
-    
+  
     //RENDER
     return (
         <div className="container interviewList">
-            <ReportPageSearch/>
+            <ReportPageSearch />
             {
-               interviews.map(result => {
-                   return <InterviewCard interview={result} key={result.interviewID}/>
-               }) 
+                interviews.map(result => {
+                    return <InterviewCard interview={result} setInterviewID={setInterviewIDProps} setModalVisibility={setModalVisibilityProps} key={result.interviewID} />
+                })
             }
+            <Modal modalVisibility={modalVisibility} setModalVisibility={setModalVisibilityProps} interview={interview} />
         </div>
     );
 }
