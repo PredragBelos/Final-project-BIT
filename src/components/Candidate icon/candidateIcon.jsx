@@ -1,4 +1,5 @@
 import React from 'react';
+import { homePageUrl } from '../../shared/publicData';
 import './css/candidateIcon.css';
 
 const CandidateIcon = () => {
@@ -10,7 +11,7 @@ const CandidateIcon = () => {
 
     /*Function for open home page*/
     const openPage = () => {
-        window.open("http://localhost:3000/home", "_self");
+        window.open(homePageUrl, "_self");
     }
 
 

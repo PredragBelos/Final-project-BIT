@@ -2,9 +2,14 @@
 /*Class that present a candidates objects*/
 export class Candidate {
     constructor(id, name, email, dateOfBirth, education) {
+
+        /* Data validation */
         try {
             if (!id) {
                 throw new Error("Candidate id must be defined!");
+            }
+            if(!(typeof id === "number")){
+                throw new Error("Type of candidate id must be a number!");
             }
             if (!name) {
                 throw new Error("Candidate name must be defined!");
@@ -42,6 +47,7 @@ export class Candidate {
         }
     }
 
+    /* Method for return dateOf Birth in correct format*/
     getBirthday(){
         let result = `${this.dateOfBirth.getDate()}.${this.dateOfBirth.getMonth() +1 }.${this.dateOfBirth.getFullYear()}.`;
         return result;

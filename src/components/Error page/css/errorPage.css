@@ -1,0 +1,40 @@
+.errorPage{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.2);
+}
+
+.errorMessage{
+    width: 650px;
+    height: 200px;
+    padding: 20px;
+    background-color: rgb(51, 51, 51);
+    border: 2px solid rgb(255, 173, 51);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorMessage p{
+    font-size: 26px;
+    text-align: center;
+    color: rgb(255, 173, 51);
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+    .errorPage{
+        padding: 0px 20px;
+    }
+
+    .errorMessage p{
+        font-size: 20px;
+        
+    }
+}
+
