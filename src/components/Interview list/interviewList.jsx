@@ -30,13 +30,14 @@ const InterviewList = () => {
             setInterview(result.filter(item => { return parseInt(item.interviewID) === parseInt(interviewId) }));
         })
 
-    }, [interviewId])
+    }, [interviewId, interviews])
 
 
     //FUNCTIONS
     const setModalVisibilityProps = modalVisibility => setModalVisibility(modalVisibility);
     const setInterviewIDProps = interviewId => setInterviewID(interviewId);
     const setFilteredInterviewsProps = filteredInterviews => setFilteredInterviews(filteredInterviews);
+    const refreshInterviews = interviews => setInterviews(interviews);
 
   
     //RENDER
@@ -46,10 +47,10 @@ const InterviewList = () => {
             {
                 (interviews.length === filteredInterviews.length)
                 ? interviews.map(result => {
-                    return <InterviewCard interview={result} setInterviewID={setInterviewIDProps} setModalVisibility={setModalVisibilityProps} key={result.interviewID} />
+                    return <InterviewCard interview={result} setInterviewID={setInterviewIDProps} setModalVisibility={setModalVisibilityProps} refreshInterviews={refreshInterviews} key={result.interviewID} />
                 })
                 : filteredInterviews.map(result => {
-                    return <InterviewCard interview={result} setInterviewID={setInterviewIDProps} setModalVisibility={setModalVisibilityProps} key={result.interviewID} />
+                    return <InterviewCard interview={result} setInterviewID={setInterviewIDProps} setModalVisibility={setModalVisibilityProps} refreshInterviews={refreshInterviews} key={result.interviewID} />
                 })
             }
             <Modal modalVisibility={modalVisibility} setModalVisibility={setModalVisibilityProps} interview={interview} />

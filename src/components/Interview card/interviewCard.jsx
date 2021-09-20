@@ -1,7 +1,8 @@
 import React from 'react';
+import { deleteInterview, getInterview } from '../../services/apiServices';
 import './css/interviewCard.css';
 
-const InterviewCard = ({interview, setInterviewID, setModalVisibility}) => {
+const InterviewCard = ({interview, setInterviewID, setModalVisibility, refreshInterviews}) => {
 
     //STATE
 
@@ -12,6 +13,19 @@ const InterviewCard = ({interview, setInterviewID, setModalVisibility}) => {
         setModalVisibility(true);
         setInterviewID(e.target.id);
     }
+
+    /* Function for deleting interview*/
+    const deleteInt = (e) => {
+
+        /*Delete interview*/
+        deleteInterview(e.target.id)
+
+        /*Refresh data after deleting*/
+        getInterview().then(items => {
+            refreshInterviews(items);
+        })
+    }
+
 
     //RENDER
     return (
@@ -38,7 +52,7 @@ const InterviewCard = ({interview, setInterviewID, setModalVisibility}) => {
 
             <div className="repBtns">
                 <img id={interview.interviewID} onClick={clickOnDetails} src="https://icon-library.com/images/more-icon/more-icon-16.jpg" alt="det.." />
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/001/192/558/small/x-line.png" alt="det.." />
+                <img id={interview.interviewID} onClick={deleteInt} src="https://static.vecteezy.com/system/resources/thumbnails/001/192/558/small/x-line.png" alt="det.." />
             </div>
 
             

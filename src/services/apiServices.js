@@ -17,9 +17,9 @@ export async function getCandidate() {
     let data = await request.json();
 
     let candidateArray = await data.map(candidate => {
-        return new Candidate(candidate.id ,candidate.name, candidate.email, candidate.birthday, candidate.education);
+        return new Candidate(candidate.id, candidate.name, candidate.email, candidate.birthday, candidate.education);
     })
-    
+
     return candidateArray;
 }
 
@@ -40,7 +40,7 @@ export async function getCompany() {
     let companyArray = await data.map(company => {
         return new Company(company.id, company.name);
     })
-    
+
     return companyArray;
 }
 
@@ -61,6 +61,22 @@ export async function getInterview() {
     let interviewArray = await data.map(interview => {
         return new Interview(interview.id, interview.interviewDate, interview.note, interview.phase, interview.status, interview.companyId, interview.companyName, interview.candidateId, interview.candidateName);
     });
-    
+
     return interviewArray;
+}
+
+/*Function for deleting interview*/
+export async function deleteInterview(id) {
+    let requset = await fetch
+        (
+            `${getInterviewUrl}/${id}`,
+            {
+                method: "DELETE",
+                headers: { "Authorization": `Bearer ${localStorage.getItem("apiKey")}` }
+            }
+        );
+
+    let data = await requset.json();
+
+    return data;
 }
